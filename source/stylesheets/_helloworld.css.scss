@@ -1,11 +1,9 @@
 .helloworld_unstyled {
-  .div {
-    font-family: Times "Times New Roman" serif;
-  }
 }
 
 .helloworld_modernist {
   background-color: #eee;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 
   .div {
     margin: 100px;
@@ -36,6 +34,7 @@
 
 .helloworld_nametag {
   background-color: gold;
+  font-family: "Marker Felt", "Comic Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
 
   .div {
     width: 400px;
@@ -55,6 +54,7 @@
     color: white;
     background-color: red;
     
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
     font-size: 40px;
     line-height: 80px;
   }
