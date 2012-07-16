@@ -1,18 +1,14 @@
 ---
 title: "Hello, World!"
-excercises:
-  - unstyled
-  - modernist
-  - nametag
-  - tron
-breadcrumbs:
-  - helloworld
 ---
 
 <h2>Hello, World!</h2>
+
+<p>Let's make a little webpage.</p>
+
 <h3>Examples</h3>
 <ul>
-  <% current_page.data.excercises.each do |e| %>
-  <li><a href="/helloworld/<%= e %>.html"><%= e %></a></li>
+  <% data.helloworld.exercises.each do |e| %>
+  <li><a href="/helloworld/<%= e %>/"><%= e %></a></li>
   <% end %>
 </ul>

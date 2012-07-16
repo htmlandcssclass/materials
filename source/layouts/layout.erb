@@ -14,8 +14,8 @@
         <% if current_page.data.parent %>
         <li><a href="<%=current_page.data.parent[:path]%>"><%=current_page.data.parent[:title]%></a></li>
         <% end %>
-        <% if current_page.data.title %>
-        <li class="current_page"><%=current_page.data.title%></div>
+        <% if title %>
+        <li class="current_page"><%= title %></div>
         <% end %>
       </ul>
     </header>

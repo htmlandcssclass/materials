@@ -29,9 +29,11 @@
 # end
 
 # Proxy (fake) files
-# page "/this-page-has-no-template.html", :proxy => "/template-file.html" do
-#   @which_fake_page = "Rendering a fake page with a variable"
-# end
+data.helloworld.exercises.each do |e|
+  page "/helloworld/#{e}/index.html", :proxy => "/helloworld/helloworld.html", :ignore => true do
+    @title = e.titlecase
+  end
+end
 
 ###
 # Helpers
@@ -46,6 +48,12 @@
 #     "Helping"
 #   end
 # end
+
+helpers do
+  def title
+    current_page.data.title || @title || nil
+  end
+end
 
 set :css_dir, 'stylesheets'
 
