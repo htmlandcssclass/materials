@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= data.page.title || "HTML and CSS Class" %></title>
+    
+    <%= stylesheet_link_tag "normalize", "style" %>
+  </head>
+  
+  <body class="<%= page_classes %>">
+    <header>
+      <ul>
+        <li><a href="/" class="home">HTML and CSS Class</a></li>
+        <% if current_page.data.parent %>
+        <li><a href="<%=current_page.data.parent[:path]%>"><%=current_page.data.parent[:title]%></a></li>
+        <% end %>
+        <% if current_page.data.title %>
+        <li class="current_page"><%=current_page.data.title%></div>
+        <% end %>
+      </ul>
+    </header>
+    <div class="content">
+    <%= yield %>
+    </div>
+  </body>
+</html>
