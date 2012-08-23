@@ -3,19 +3,16 @@
   <head>
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= data.page.title || "HTML and CSS Class" %></title>
-    
+
     <%= stylesheet_link_tag "style" %>
   </head>
-  
+
   <body class="<%= page_classes %> <%= 'navigator' if current_page.data.navigator %>">
     <header>
       <ul>
         <li><a href="/" class="home">HTML and CSS Class</a></li>
-        <% if current_page.parent && current_page.parent.data.title %>
-        <li><a href="<%=current_page.parent.url%>"><%=current_page.parent.data.title%></a></li>
-        <% end %>
-        <% if current_page.parent %>
-        <li class="current_page"><%= title %></div>
+        <% breadcrumbs.each_with_index do |crumb, i| %>
+        <li><%= link_to_crumb(crumb) %></li>
         <% end %>
       </ul>
     </header>
