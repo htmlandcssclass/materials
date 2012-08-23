@@ -28,9 +28,18 @@
 #   page "/admin/*"
 # end
 
+with_layout :assignments do
+  page ''
+  page '/assignments/*'
+end
+
+with_layout :examples do
+  page '/examples/*'
+end
+
 # Proxy (fake) files
 data.helloworld.exercises.each do |e|
-  page "/helloworld/#{e}/index.html", :proxy => "/helloworld/helloworld.html", :ignore => true do
+  page "examples/helloworld/#{e}/index.html", :proxy => "examples/helloworld/helloworld.html", :ignore => true do
     @title = e.titlecase
   end
 end

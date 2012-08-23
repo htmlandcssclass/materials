@@ -4,7 +4,7 @@ body {
 }
 
 body > header a,
-body.navigator a {
+body.assignments a {
   text-decoration: none;
   padding: 0 6px;
   
@@ -15,7 +15,7 @@ body.navigator a {
 }
 
 body > header a.home,
-body.navigator a {
+body.assignments a {
   color: #666;
   background-color: #ccc;
 }

@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= data.page.title || "HTML and CSS Class" %></title>
+    
+    <%= stylesheet_link_tag "style" %>
+    <%= stylesheet_link_tag "assignments" %>
+  </head>
+  
+  <body class="<%= page_classes %> assignments">
+    <%= partial 'shared/header' %>
+    <div class="content">
+    <%= yield %>
+    </div>
+  </body>
+</html>

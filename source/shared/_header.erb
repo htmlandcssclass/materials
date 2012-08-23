@@ -1,0 +1,11 @@
+<header>
+  <ul>
+    <li><a href="/" class="home">HTML and CSS Class</a></li>
+    <% if current_page.parent && current_page.parent.data.title %>
+    <li><a href="<%=current_page.parent.url%>"><%=current_page.parent.data.title%></a></li>
+    <% end %>
+    <% if current_page.parent %>
+    <li class="current_page"><%= title %></div>
+    <% end %>
+  </ul>
+</header>
