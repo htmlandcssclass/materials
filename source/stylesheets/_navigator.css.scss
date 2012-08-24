@@ -63,15 +63,15 @@ body.navigator {
         margin-bottom: 12px;
       }
     }
+  }
+
+  .content aside a {
+    padding: 0 6px;
     
-    a {
-      padding: 0 6px;
-      
-      color: #ccc;
-      background-color: #555;
-      
-      text-decoration: none;
-    }
+    color: #ccc;
+    background-color: #555;
+    
+    text-decoration: none;
   }
   
   ol {
