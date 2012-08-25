@@ -24,9 +24,10 @@
 # page "/path/to/file.html", :layout => :otherlayout
 #
 # A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
+with_layout :navigator do
+  page ""
+  page "/*/index.html"
+end
 
 # Proxy (fake) files
 data.helloworld.exercises.each do |e|

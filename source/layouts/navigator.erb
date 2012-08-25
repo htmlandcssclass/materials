@@ -3,13 +3,11 @@
   <head>
     <title><%= title || "HTML and CSS Class" %></title>
 
-    <%= stylesheet_link_tag 'global' %>
-    <% if content_for?(:assets) %>
-      <div><%= yield_content :assets %></div>
-    <% end %>
+    <%= stylesheet_link_tag 'global', 'navigator' %>
+    <%= yield_content :head %>
   </head>
 
-  <body class="<%= page_classes %>">
+  <body class="<%= page_classes %> navigator">
     <%= partial 'layouts/header' %>
     <div class="content">
     <%= yield %>

@@ -1,0 +1,11 @@
+<header>
+  <ul>
+    <li><a href="/" class="home">HTML and CSS Class</a></li>
+    <% breadcrumbs.each do |crumb| %>
+    <li><%= link_to(crumb[:title], crumb[:url]) %></li>
+    <% end %>
+    <% unless title.blank? %>
+    <li><%= title %></li>
+    <% end %>
+  </ul>
+</header>
