@@ -55,14 +55,15 @@ helpers do
   end
 
   def breadcrumbs
-    return [
-      { id: 'helloworld', title: 'Hello, World!'},
-      { id: 'tron', title: 'Tron'}
-    ]
-  end
+    return [] unless request && request.path
 
-  def link_to_crumb(crumbs)
-    return link_to(crumbs[:title], crumbs[:id])
+    parts = request.path.split('/')
+    crumbs = parts[1,parts.length-3] || []
+
+    crumbs.map do |c|
+      title = data.titles[c] || c.titlecase
+      {title: title, url: "/#{c}/"}
+    end
   end
 end
 
