@@ -4,9 +4,7 @@
     <title><%= title || "HTML and CSS Class" %></title>
 
     <%= stylesheet_link_tag 'global' %>
-    <% if content_for?(:assets) %>
-      <div><%= yield_content :assets %></div>
-    <% end %>
+    <%= yield_content :assets %>
   </head>
 
   <body class="<%= page_classes %>">

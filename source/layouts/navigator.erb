@@ -10,7 +10,8 @@
   <body class="<%= page_classes %> navigator">
     <%= partial 'layouts/header' %>
     <div class="content">
-    <%= yield %>
+      <h1><%= title %></h1>
+      <%= yield %>
     </div>
   </body>
 </html>

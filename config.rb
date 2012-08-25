@@ -26,7 +26,8 @@
 # A path which all have the same layout
 with_layout :navigator do
   page ""
-  page "/*/index.html"
+  page '/helloworld/index.html'
+  page '/eames/index.html'
 end
 
 # Proxy (fake) files
@@ -52,7 +53,7 @@ end
 
 helpers do
   def title
-    current_page.data.title || @title || nil
+    data.titles[id] || id.titlecase || nil
   end
 
   def breadcrumbs
@@ -65,6 +66,12 @@ helpers do
       title = data.titles[c] || c.titlecase
       {title: title, url: "/#{c}/"}
     end
+  end
+
+  def id
+    return [] unless request && request.path
+    parts = request.path.split('/')
+    return parts[-2]
   end
 end
 
