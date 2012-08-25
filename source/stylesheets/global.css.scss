@@ -7,7 +7,7 @@ body > header a,
 body.navigator a {
   text-decoration: none;
   padding: 0 6px;
-  
+
   &:hover {
     background-color: #EF4074;
     color: white;
@@ -15,7 +15,7 @@ body.navigator a {
 }
 
 body > header a.home,
-body.navigator .content a {
+body.navigator a {
   color: #666;
   background-color: #ccc;
 }
@@ -34,7 +34,7 @@ body > header {
   top: 0;
   height: 24px;
   z-index: 100;
-  
+
   background-color: rgba(0,0,0,.6);
   color: white;
   box-shadow: 0 0 3px rgba(0,0,0,.7);
@@ -42,33 +42,33 @@ body > header {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   line-height: 24px;
   font-size: 12px;
-  
+
   a {
     color: #ccc;
     font-weight: bold;
-    
+
     &:hover {
       background-color: #EF4074;
       color: white;
     }
   }
-  
+
   ul {
     list-style: none;
     height: 24px;
-    
+
     li {
       float: left;
       padding-left: 6px;
-      
+
       &:before {
         content: "|";
         padding-right: 6px;
       }
-      
+
       &:first-child {
         padding-left: 0;
-        
+
         &:before {
           content: "";
           padding-right: 0;
@@ -78,13 +78,13 @@ body > header {
         padding-right: 0;
       }
     }
-    
+
   }
-  
+
   .home {
     font-weight: bold;
   }
-  
+
   .current_page {
     color: rgba(255,255,255,.5);
   }
