@@ -5,7 +5,7 @@
     <li><%= link_to(crumb[:title], crumb[:url]) %></li>
     <% end %>
     <% unless title.blank? %>
-    <li><%= title %></li>
+    <li class="current_page"><%= title %></li>
     <% end %>
   </ul>
 </header>
