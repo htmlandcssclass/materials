@@ -3,43 +3,44 @@ body.navigator {
 
   color: #333;
 
-  font-size: 12px;
+  font-size: 18px;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 
-  h1, h2, h3, h4, h5, h6 {
-    margin: 0 0 24px 0;
+  h1, h2 {
+    margin: 0 0 18px 0;
+
+    font-size: 36px;
+    line-height: 36px;
   }
 
-  h1, h2 {
-
-    font-size: 48px;
-    line-height: 48px;
+  h3, h4, h5, h6, p, pre {
+    margin: 0 0 9px 0;
   }
 
   h3, h4 {
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 18px;
   }
 
   h5, h6 {
-    font-size: 12px;
-    line-height: 12px;
+    font-size: 9px;
+    line-height: 9px;
   }
 
   h2, h4, h6 {
-    color: #666;
+    color: #999;
   }
 
   h2 {
-    font-size: 48px;
+    font-size: 36px;
   }
 
   h3 {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   h4 {
-    font-size: 24px;
+    font-size: 9px;
   }
 
   aside {
@@ -55,58 +56,74 @@ body.navigator {
       padding: 0;
       list-style: none;
 
-      font-size: 24px;
-
       li {
         padding: 0;
 
-        margin-bottom: 12px;
+        margin-bottom: 9px;
       }
-    }
-  }
-
-  aside a {
-    padding: 0 6px;
-
-    color: #ccc;
-    background-color: #555;
-
-    text-decoration: none;
-  }
-
-  ol {
-    list-style-type: none;
-    margin-left: 0;
-    padding: 0;
-
-    li {
-      counter-increment: customlistcounter;
-      margin-left: -72px;
-      margin-bottom: 18px;
-
-      font-size: 48px;
-      line-height: 48px;
-    }
-
-    li:before {
-      content: counter(customlistcounter);
-      float: left;
-      width: 48px;
-      padding-right: 24px;
-
-      color: #ccc;
-
-      font-weight: bold;
-      text-align: right;
-    }
-
-    &:first-child {
-      counter-reset: customlistcounter;
     }
 
     a {
-      margin-left: -6px;
+      padding: 0 6px;
+
+      color: #ccc;
+      background-color: #555;
+
+      text-decoration: none;
     }
   }
 
+  code {
+    padding: 0 2px;
+  }
+
+  code, pre {
+    background-color: rgb(255,230,250);
+  }
+
+  section {
+    margin-bottom: 36px;
+  }
+
+  .content {
+    padding-left: 48px;
+    max-width: 680px;
+
+    a {
+      margin-left: -3px;
+    }
+
+    ul, ol {
+      list-style-type: none;
+      margin-top: 0;
+      padding: 0;
+
+      li {
+        margin-bottom: 9px;
+      }
+    }
+
+    ol {
+      li {
+        counter-increment: customlistcounter;
+      }
+
+      li:before {
+        content: counter(customlistcounter);
+        float: left;
+        width: 48px;
+        margin-left: -66px;
+        padding-right: 18px;
+
+        color: #ccc;
+
+        font-weight: bold;
+        text-align: right;
+      }
+
+      &:first-child {
+        counter-reset: customlistcounter;
+      }
+    }
+  }
 }

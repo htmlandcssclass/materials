@@ -6,7 +6,7 @@ body {
 body > header a,
 body.navigator a {
   text-decoration: none;
-  padding: 0 6px;
+  padding: 0 3px;
 
   &:hover {
     background-color: #EF4074;
@@ -20,11 +20,18 @@ body.navigator a {
   background-color: #ccc;
 }
 
+header > ul {
+  padding: 0 10px 0 48px;
+}
+
+body > .content {
+  padding: 0 10px;
+}
+
 header > ul,
 body > .content {
   margin: 0 auto;
-  padding: 0 10px;
-  width: 940px;
+  max-width: 940px;
 }
 
 body > header {

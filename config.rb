@@ -28,6 +28,7 @@ with_layout :navigator do
   page ""
   page '/helloworld/index.html'
   page '/eames/index.html'
+  page '/homework_class_1/index.html'
 end
 
 # Proxy (fake) files
