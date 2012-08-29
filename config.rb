@@ -28,6 +28,7 @@ with_layout :navigator do
   page ""
   page '/helloworld/index.html'
   page '/eames/index.html'
+  page '/paradise_pickles/index.html'
   page '/homework_class_1/index.html'
 end
 
