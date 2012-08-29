@@ -1,0 +1,22 @@
+paradise_pickles:
+  '#5d290a': 'Headline, pullquote text, and links'
+  '#e9e4e1': 'Pullquote border'
+  '#423d3a': 'Body text'
+  '#8e6e5a': 'Attribution text'
+
+helloworld_modernist:
+  '#eeeeee': Body background
+  'white': Div background
+  'red': Headline
+
+helloworld_tron:
+  '#333333': Body background
+  'cyan': Body text
+  '#2d2d2d': Div background
+  'lawngreen': Div border top
+  'deeppink': Div border bottom
+
+helloworld_nametag:
+  'gold': Body background
+  'white': Headline text, div background
+  'red': Headline background, div border

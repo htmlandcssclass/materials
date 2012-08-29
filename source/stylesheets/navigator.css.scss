@@ -35,12 +35,8 @@ body.navigator {
     font-size: 36px;
   }
 
-  h3 {
+  h3, h4 {
     font-size: 18px;
-  }
-
-  h4 {
-    font-size: 9px;
   }
 
   aside {
@@ -82,6 +78,7 @@ body.navigator {
   }
 
   section {
+    clear: left;
     margin-bottom: 36px;
   }
 
@@ -125,5 +122,29 @@ body.navigator {
         counter-reset: customlistcounter;
       }
     }
+  }
+
+  .color {
+    float: left;
+
+    width: 320px;
+    height: 81px;
+    margin-left: -4px;
+    padding-right: 18px;
+  }
+
+  .swatch {
+    float: left;
+
+    width: 64px;
+    height: 64px;
+    margin: 0 18px 18px 0;
+
+    border: 4px solid white;
+    box-shadow: 0 0 1px #666;
+  }
+
+  .value code {
+    background-color: transparent;
   }
 }
