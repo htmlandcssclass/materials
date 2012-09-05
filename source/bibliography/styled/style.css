@@ -1,0 +1,85 @@
+/* Page layout and style */
+
+body {
+  background-image: url('wood_pattern.png');
+  color: #404040;
+}
+
+.bibliography {
+  width: 480px;
+  height: 680px;
+  margin: 48px auto;
+  padding: 60px;
+
+  box-shadow: 0 1px 3px rgba(0,0,0,.4);
+  background-image: url('handmadepaper.png');
+  border-top: 1px solid white;
+}
+
+
+/* Typography */
+
+body {
+  color: #404040;
+  
+  font-family: monospace;
+  line-height: 24px;
+}
+
+h1, .source {
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+
+/* MLA styling */
+
+.title {
+  font-weight: bold;
+}
+
+.book .title {
+  text-decoration: underline;
+}
+
+.article .title {
+  font-style: oblique;
+}
+
+
+/* display: block experiments */
+
+.source:hover {
+  background-color: #ffd;
+}
+
+span:hover {
+  background-color: #cfc;
+}
+
+.author,
+.title {
+  display: block;
+}
+
+
+/* Final touches */
+
+.article .title {
+  margin-left: -10px;
+}
+
+.detail {
+  color: #999;
+}
+
+
+/* display: none experiments */
+
+.detail {
+  //display: none;
+}
+
+.source:hover .detail {
+  //display: inline;
+}

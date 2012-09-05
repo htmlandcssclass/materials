@@ -4,7 +4,7 @@ body {
 }
 
 body > header a,
-body.navigator a {
+body a {
   text-decoration: none;
   padding: 0 3px;
 
@@ -14,8 +14,7 @@ body.navigator a {
   }
 }
 
-body > header a.home,
-body.navigator a {
+body > header a.home {
   color: #666;
   background-color: #ccc;
 }
@@ -27,11 +26,6 @@ header > ul {
   li:first-child {
     margin-left: -18px;
   }
-}
-
-body > .content {
-  padding: 0 10px;
-  max-width: 940px;
 }
 
 header > ul,
@@ -100,4 +94,14 @@ body > header {
   .current_page {
     color: rgba(255,255,255,.5);
   }
+}
+
+iframe {
+  position:absolute;
+  top: 0;
+  height: 100%;
+  left: 0;
+  width: 100%;
+
+  border: none;
 }

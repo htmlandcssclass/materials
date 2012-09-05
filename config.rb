@@ -24,20 +24,16 @@
 # page "/path/to/file.html", :layout => :otherlayout
 #
 # A path which all have the same layout
-with_layout :navigator do
-  page ""
-  page '/helloworld/index.html'
-  page '/eames/index.html'
-  page '/paradise_pickles/index.html'
-  page '/homework_class_1/index.html'
-end
+# with_layout :navigator do
+#   page "*"
+# end
 
 # Proxy (fake) files
-data.helloworld.exercises.each do |e|
-  page "/helloworld/#{e}/index.html", :proxy => "/helloworld/helloworld.html", :ignore => true do
-    @title = e.titlecase
-  end
-end
+# data.helloworld.exercises.each do |e|
+#   page "/helloworld/#{e}/index.html", :proxy => "/helloworld/helloworld.html", :ignore => true do
+#     @title = e.titlecase
+#   end
+# end
 
 ###
 # Helpers
