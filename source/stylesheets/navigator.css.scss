@@ -168,5 +168,36 @@ body.index {
   h1 {
     font-size: 96px;
     line-height: 96px;
+
+    .html {
+      &:before {
+        margin-left: -60px;
+        content: '<';
+      }
+
+      &:after {
+        content: '>';
+      }
+    }
+
+    .and {
+      margin-left: -25px;
+    }
+
+    .css {
+      &:before {
+        margin-left: -20px;
+        content: '{';
+      }
+
+      &:after {
+        content: '}';
+      }
+    }
+
+    .html:before, .html:after, .css:before, .css:after {
+      color: #eee;
+    };
+
   }
 }
