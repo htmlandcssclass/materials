@@ -22,16 +22,21 @@ body.navigator a {
 
 header > ul {
   padding: 0 10px 0 48px;
+  width: 680px;
+
+  li:first-child {
+    margin-left: -18px;
+  }
 }
 
 body > .content {
   padding: 0 10px;
+  max-width: 940px;
 }
 
 header > ul,
 body > .content {
   margin: 0 auto;
-  max-width: 940px;
 }
 
 body > header {
