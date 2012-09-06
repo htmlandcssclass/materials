@@ -1,0 +1,12 @@
+<section>
+  <h3>Images</h3>
+  <ul class="images">
+    <% images.each do |url, label| %>
+    <li class="image">
+      <div class="swatch" style="background: url(/images/<%= url %>) no-repeat"></div>
+      <p class="label"><%= label %></p>
+      <p class="value"><code>http://htmlandcssclass.com/<%= url %></code></p>
+    </li>
+    <% end %>
+  </ul>
+</section>

@@ -1,0 +1,12 @@
+<section>
+  <h3>Patterns</h3>
+  <ul class="patterns">
+    <% patterns.each do |url, label| %>
+    <li class="pattern">
+      <div class="swatch" style="background: url(/images/<%= url %>)"></div>
+      <p class="label"><%= label %></p>
+      <p class="value"><code>http://htmlandcssclass.com/<%= url %></code></p>
+    </li>
+    <% end %>
+  </ul>
+</section>

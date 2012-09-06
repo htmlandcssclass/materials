@@ -20,3 +20,7 @@ helloworld_nametag:
   'gold': Body background
   'white': Headline text, div background
   'red': Headline background, div border
+
+bibliography:
+  '#404040': Body text
+  '#999999': City and publisher text

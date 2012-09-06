@@ -1,9 +1,30 @@
 <section>
   <%= partial 'shared/title' %>
-  <h2>Element decoration</h2>
-  <p>Let's make a simple <a href="/paradise_pickles/styled/">webpage about a book</a>.</p>
-  <p>We'll mark up the content in HTML first, as usual.</p>
-  <p>Then we'll style the content with CSS.</p>
+  <h2>Display property</h2>
 </section>
 
-<a class="preview" href="/bibliography/styled"><img src="/images/bibliography.png" /></a>
+<a class="preview" href="/bibliography/styled/"><img src="/images/bibliography/styled.png" /></a>
+
+<section>
+  <p>Explore the <code>display</code> property by creating a <a href="/bibliography/styled/">bibliography of awesome science fiction</a>.</p>
+</section>
+
+<section>
+  <h3>Copy</h3>
+  <pre><code>SciFi Bibliography
+
+Doctorow, Corey.
+Down and Out in the Magic Kingdom.
+Seaford, NY, U.S.A. Tor Books
+
+Gibson, William.
+"The Road to Oceania".
+The New York Times 25 June 2003
+
+Shteyngart, Gary.
+Super Sad True Love Story.
+London HarperCollins</code></pre>
+</section>
+
+<%= partial 'shared/colors', locals: {colors: data.colors.bibliography} %>
+<%= partial 'shared/patterns', locals: {patterns: data.patterns.bibliography} %>
