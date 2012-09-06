@@ -110,11 +110,21 @@ ol {
   }
 }
 
+.colors {
+  margin-bottom: 9px;
+}
 
-ul.colors,
-ul.patterns {
-  margin-left: -4px;
-  margin-bottom: 36px;
+.patterns {
+  margin-bottom: 0;
+}
+
+.images {
+  margin-bottom: 0;
+}
+
+.colors ul,
+.patterns ul,
+.images ul {
   padding: 1px;
   overflow: hidden;
 }
@@ -137,16 +147,12 @@ ul.patterns {
 
 .pattern {
   clear: left;
-  margin-bottom: 36px;
+  margin-bottom: 18px;
 
   .swatch {
     height: 64px;
-    margin-bottom: 18px;
   }
 
-  .value code {
-    font-size: 12px;
-  }
 }
 
 .image {
@@ -157,14 +163,21 @@ ul.patterns {
 }
 
 .swatch {
+  margin-bottom: 9px;
+
   border: 4px solid white;
   box-shadow: 0 0 1px #666;
 }
 
 .value code {
   background-color: transparent;
+
+  font-size: 12px;
 }
 
+.label {
+  margin-bottom: 0;
+}
 
 a.preview {
   -webkit-transition: box-shadow .2s linear;
