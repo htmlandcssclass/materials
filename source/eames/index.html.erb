@@ -2,42 +2,32 @@
   <%= partial 'shared/title' %>
   <h2>Paragraphs, Images and Links</h2>
   <a class="preview" href="/eames/styled/"><img src="/images/eames/styled.png" /></a>
-</section>
-
-<section>
-  <p>We're going to create a simple web page containing information about two prolific, influential designers.</p>
-  <p>First we'll mark up the content in HTML.</p>
-  <p>Then we'll style the content with CSS.</p>
+  <p>Create a simple web page about two prolific, influential designers.</p>
 </section>
 
 <section>
   <h3>Set up</h3>
-  <ol>
+  <ul>
     <li>Create a new workspace on <a href="http://c9.io">Cloud9</a> named <code>eames</code>.</li>
-  </ol>
+  </ul>
 </section>
 
 <section>
   <h3>Markup</h3>
-  <p>Let's mark up some text about Charles and Ray.</p>
-  <p>When we're finished with this section your page should <a href="/eames/unstyled/">look a bit like this</a>.</p>
-  <ol>
+  <ul>
     <li>
       <p>Mark up headlines with the <code>h1</code> tagname, sub-heads with the <code>h2</code> tagname and paragraphs with the <code>p</code> tagname.</p>
     </li>
     <li>
       <p>Include an image by adding an element with the <code>img</code> tagname.</p>
-      <p>Use the <code>src</code> attribute to specify a url pointing to the image.</p>
-      <pre><code>&lt;img src=&quot;http://htmlandcssclass.com/images/eames/eameslounge.jpg&quot; alt=&quot;Eames Lounge&quot;/&gt;</code></pre>
     </li>
     <li>
       <p>Create a hyperlink using an element with the <code>a</code> tagname.</p>
-      <p>Clicking content between the opening and closing <code>a</code> tags will navigate your browser to the URL in the <code>href</code> attribute.</p>
-      <p>Here's an example of an <code>a</code> tag.</p>
-      <pre><code>&lt;a href=&quot;http://eamesdesigns.com/&quot;&gt;Eames Designs&lt;a/&gt;</code></pre>
     </li>
-  </ol>
+  </ul>
 </section>
+
+<%= partial 'shared/images', locals: {images: data.images.eames} %>
 
 <section>
   <h3>Copy</h3>
@@ -75,4 +65,3 @@ and moved to New York, where she studied abstract expressionist painting
 with Hans Hofmann. One of her paintings is in the permanent collection
 of The Whitney Museum of American Art.</code></pre>
 </section>
-<%= partial 'shared/images', locals: {images: data.images.eames} %>
