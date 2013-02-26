@@ -1,0 +1,38 @@
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.output {
+    float: left;
+    width: 300px;
+    margin: 0;
+}
+
+.inputs {
+    float: left;
+    width: 200px;
+}
+
+.control {
+    overflow: hidden;
+    margin-left: 20px;
+}
+.control input,
+.control select {
+    vertical-align: bottom;
+    line-height: 20px;
+}
+
+.control select,
+.control input[type=range] {
+    margin: 0 initial;
+    width: 130px;
+}
+
+.disabled {
+    color: #ccc;
+}
+
+.spacer {
+    margin-top: 20px;
+}
