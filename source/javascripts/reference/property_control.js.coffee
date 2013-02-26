@@ -1,19 +1,22 @@
 class window.PropertyControl
 
-  constructor: (@property, @controlEl, @displayEl, options) ->
-    { @initialValue, @disabledValue } = options
-    @initialValue ?= 0
-    @disabledValue ?= 'initial'
+  template: _.template '''
+    <div id="<%= property %>-control" class="control">
+      <code class="output">
+        <span class="property"><%= property %>:</span>
+        <span class="value"></span>;
+      </code>
+      <div class="inputs">
+        <input class="enabled" type="checkbox" <%= checked %> />
+        <%= input %>
+      </div>
+    </div>
+  '''
 
-    @enabledInput = @controlEl.find("[name=#{property}-enabled]")
-    @valueInput = @controlEl.find("[name=#{property}-value]")
-    @valueOutput = @controlEl.find('.value')
-
-    @enabledInput.on 'change', @enableOrDisable
-    @valueInput.on 'change', @pullValueFromInput
-
-    @value = @initialValue
-    @enableOrDisable()
+  constructor: (@property, @displayEl, @options) ->
+    { @value, @disabledValue } = @options
+    @value          ?= 0
+    @disabledValue  ?= 'initial'
 
   showValue: (value) ->
     @valueOutput.text(@formattedValue(value))
@@ -21,7 +24,8 @@ class window.PropertyControl
 
   enableOrDisable: =>
     disabled = !@enabledInput.is(':checked')
-    @controlEl.toggleClass('disabled', disabled)
+    console.log @enabledInput[0]
+    @el.toggleClass('disabled', disabled)
     @valueInput.prop('disabled', disabled)
     if (disabled)
       @showValue(@disabledValue)
@@ -35,3 +39,20 @@ class window.PropertyControl
   formattedValue: (value) ->
     isANumber = value > 0 || value < 0
     if isANumber then value+'px' else value
+
+  render: ->
+    markup = @template
+      property: @property
+      checked: if @options.enabled then 'checked' else ''
+      input: @options.input
+    @el = $(markup)
+
+    @enabledInput = @el.find('.enabled')
+    @valueInput = @el.find('.inputs .value')
+    @valueOutput = @el.find('.output .value')
+
+    @enabledInput.on 'change', @enableOrDisable
+    @valueInput.on 'change', @pullValueFromInput
+
+    @enableOrDisable()
+    @

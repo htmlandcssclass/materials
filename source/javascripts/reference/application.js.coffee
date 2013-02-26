@@ -1,45 +1,90 @@
 $ ->
-  displayEl = $('p');
+  selector = 'p'
+  propertiesEl = $('#properties')
+  displayEl = $(selector);
+  $('.selector').text(selector)
 
-  makePropertyControl = (property, options) ->
-    new PropertyControl property, $("##{property}-control"), displayEl, options
+  property = (property, options) ->
+    prop = new PropertyControl property, displayEl, options
+    propertiesEl.append(prop.render().el)
 
-  # layout
-  makePropertyControl 'display',
-    initialValue: 'block',
+  comment = (comment, spacer = true) ->
+    classes = ['control']
+    classes.push 'spacer' if spacer
+    propertiesEl.append("<div class='#{classes.join(' ')}'><code class='disabled'>// #{comment}</code></div>")
+
+  select = (options...) ->
+    optionsMarkup = _(options).reduce((memo, value) ->
+      memo += "<option>#{value}</option>"
+    , '')
+    '<select class="value">' + optionsMarkup + '</select>'
+
+  range = (value = 50, min = 0, max = 100) ->
+    "<input type='range' class='value' min='#{min}' max='#{max}' value='#{value}' />"
+
+  comment 'layout', false
+  property 'display',
+    enabled: true
+    value: 'block'
     disabledValue: 'block'
-  makePropertyControl 'position',
-    initialValue: 'static',
-    disabledValue: 'static'
-  makePropertyControl 'width',
-    initialValue: 400
-  makePropertyControl 'height',
-    initialValue: 200
-  makePropertyControl 'top',
-    initialValue: 0
-  makePropertyControl 'left',
-    initialValue: 0
-  makePropertyControl 'padding',
-    initialValue: 15,
-    disabledValue: 0
-  makePropertyControl 'margin',
-    initialValue: 15,
-    disabledValue: 0
+    input: select('block', 'inline', 'none')
 
-  # decoration
-  makePropertyControl 'border',
-    initialValue: '1px solid #ccc',
+  property 'position',
+    value: 'static'
+    disabledValue: 'static'
+    input: select('static', 'relative', 'absolute', 'fixed')
+
+  property 'padding',
+    enabled: true
+    value: 15
+    disabledValue: 0
+    input: range(15, 0, 50)
+
+  property 'margin',
+    enabled: true
+    value: 15
+    disabledValue: 0
+    input: range(15, 0, 50)
+
+  property 'width',
+    value: 400
+    input: range(400, 0, 600)
+
+  property 'height',
+    value: 200
+    input: range(200, 0, 600)
+
+  property 'top',
+    value: 0
+    input: range(0, 0, 600)
+
+  property 'left',
+    value: 0
+    input: range(0, 0, 600)
+
+
+  comment 'decoration'
+  property 'border',
+    value: '1px solid #ccc'
     disabledValue: 'none'
-  makePropertyControl 'background-color',
-    initialValue: '#eee',
+
+  property 'background-color',
+    enabled: true
+    value: '#eee'
     disabledValue: 'transparent'
 
-  # typography
-  makePropertyControl 'text-decoration',
-    initialValue: 'none',
+
+  comment 'typography'
+  property 'text-decoration',
+    value: 'none'
     disabledValue: 'none'
-  makePropertyControl 'font-weight',
-    initialValue: 'bold',
+    input: select 'none', 'underline', 'overline', 'line-through'
+
+  property 'font-weight',
+    value: 'bold'
     disabledValue: 'normal'
-  makePropertyControl 'line-height',
-    initialValue: 16
+    input: select 'bold', 'normal'
+
+  property 'line-height',
+    value: 16
+    input: range 16, 0, 50
