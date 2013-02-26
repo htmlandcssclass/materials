@@ -241,3 +241,21 @@ body.index {
 
   }
 }
+
+.figure, .figure code {
+  background-color: transparent;
+}
+
+.figure {
+  font-size: 27px;
+}
+
+.tagname {
+  color: #f66;
+  font-weight: bold;
+}
+
+.attribute {
+  color: #66f;
+  font-weight: bold;
+}
