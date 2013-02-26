@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="../javascripts/vendor.js"></script>
+    <script src="../javascripts/reference.js"></script>
+  </head>
+  <body>
+  
+    <h1>Interactive CSS Reference</h1>
+    
+    <div id="controls">
+        <code>p {</code>
+        
+        <div class="control">
+            <code class="disabled">// layout</code>
+        </div>
+        
+        <div id="display-control" class="control">
+            <code class="output">
+                <span class="property">display:</span>
+                <span class="value"></span>;
+            </code>
+            <div class="inputs">
+                <input name="display-enabled" type="checkbox" checked />
+                <select name="display-value">
+                    <option>block</option>
+                    <option>inline</option>
+                    <option>none</option>
+                </select>
+            </div>
+        </div>
+        
+        <div id="position-control" class="control">
+            <code class="output">
+                <span class="property">position:</span>
+                <span class="value"></span>;
+            </code>
+            <div class="inputs">
+                <input name="position-enabled" type="checkbox" />
+                <select name="position-value">
+                    <option>static</option>
+                    <option>relative</option>
+                    <option>absolute</option>
+                    <option>fixed</option>
+                </select>
+            </div>
+        </div>
+        
+        <div id="margin-control" class="control">
+            <code class="output">
+                <span class="property">margin:</span>
+                <span class="value">0</span>;
+            </code>
+            <div class="inputs">
+                <input name="margin-enabled" type="checkbox" checked />
+                <input name="margin-value" type="range" min="0" max="50" value="15" />
+            </div>
+        </div>
+        
+        <div id="padding-control" class="control">
+            <code class="output">
+                <span class="property">padding:</span>
+                <span class="value">0</span>;
+            </code>
+            <input name="padding-enabled" type="checkbox" checked />
+            <input name="padding-value" type="range" min="0" max="50" value="15" />
+        </div>
+        
+        <div id="width-control" class="control">
+            <code class="output">
+                <span class="property">width:</span>
+                <span class="value">initial</span>;
+            </code>
+            <div class="inputs">
+                <input name="width-enabled" type="checkbox" />
+                <input name="width-value" type="range" min="0" max="600" value="400" />
+            </div>
+        </div>
+        
+        <div id="height-control" class="control">
+            <code class="output">
+                <span class="property">height:</span>
+                <span class="value">initial</span>;
+            </code>
+            <div class="inputs">
+                <input name="height-enabled" type="checkbox" />
+                <input name="height-value" type="range" min="0" max="600" value="200" />
+            </div>
+        </div>
+        
+        <div id="top-control" class="control">
+            <code class="output">
+                <span class="property">top:</span>
+                <span class="value"></span>;
+            </code>
+            <div class="inputs">
+                <input name="top-enabled" type="checkbox" />
+                <input name="top-value" type="range" min="0" max="600" value="0" />
+            </div>
+        </div>
+        
+        <div id="left-control" class="control">
+            <code class="output">
+                <span class="property">left:</span>
+                <span class="value"></span>;
+            </code>
+            <div class="inputs">
+                <input name="left-enabled" type="checkbox" />
+                <input name="left-value" type="range" min="0" max="600" value="0" />
+            </div>
+        </div>
+
+
+        <div class="control spacer">
+            <code class="disabled">// decoration</code>
+        </div>
+        
+        <div id="border-control" class="control">
+            <code class="output">
+                <span class="property">border:</span>
+                <span class="value">1px solid #ccc</span>;
+            </code>
+            <div class="inputs">
+                <input name="border-enabled" type="checkbox" />
+            </div>
+        </div>
+        
+        <div id="background-color-control" class="control">
+            <code class="output">
+                <span class="property">background-color:</span>
+                <span class="value">#eee</span>;
+            </code>
+            <div class="inputs">
+                <input name="background-color-enabled" type="checkbox" checked />
+            </div>
+        </div>
+
+
+        <div class="control spacer">
+            <code class="disabled">// typography</code>
+        </div>
+        
+        <div id="text-decoration-control" class="control">
+            <code class="output">
+                <span class="property">text-decoration:</span>
+                <span class="value">none</span>;
+            </code>
+            <div class="inputs">
+                <input name="text-decoration-enabled" type="checkbox" />
+                <select name="text-decoration-value">
+                    <option>none</option>
+                    <option>underline</option>
+                    <option>overline</option>
+                    <option>line-through</option>
+                </select>
+            </div>
+        </div>
+        <div id="font-weight-control" class="control">
+            <code class="output">
+                <span class="property">font-weight:</span>
+                <span class="value">normal</span>;
+            </code>
+            <div class="inputs">
+                <input name="font-weight-enabled" type="checkbox" />
+            </div>
+        </div>
+        <div id="line-height-control" class="control">
+            <code class="output">
+                <span class="property">line-height:</span>
+                <span class="value">initial</span>;
+            </code>
+            <div class="inputs">
+                <input name="line-height-enabled" type="checkbox" />
+                <input name="line-height-value" type="range" min="0" max="50" value="16" />
+            </div>
+        </div>
+        
+        <code>}</code>
+    </div>
+    
+    <p>Slow lorises are a group of several species of strepsirrhine primates which make up the genus Nycticebus. Found in South and Southeast Asia, they range from Bangladesh and Northeast India in the west to the Philippines in the east, and from the Yunnan province in China in the north to the island of Java in the south. Although many previous classifications recognized fewer species, up to eight are now considered valid: the Sunda slow loris (N. coucang), Bengal slow loris (N. bengalensis), pygmy slow loris (N. pygmaeus), Javan slow loris (N. javanicus), Bornean slow loris (N. menagensis), N. bancanus, N. borneanus, and N. kayan. The group's closest relatives are other lorisids, such as slender lorises, pottos, false pottos, and angwantibos. They are also closely related to the remaining lorisoids (the various types of galago), as well as the lemurs of Madagascar. Their evolutionary history is uncertain since their fossil record is patchy and molecular clock studies have given inconsistent results.</p>
+    <p id="second-paragraph">Slow lorises have a round head, narrow snout, large eyes, and a variety of distinctive coloration patterns that are species-dependent. Their arms and legs are nearly equal in length, and their trunk is long, allowing them to twist and extend to nearby branches. The hands and feet of slow lorises have several adaptations that give them a pincer-like grip and enable them to grasp branches for long periods of time. Slow lorises have a toxic bite, a trait rare among mammals and unique to lorisid primates. The toxin is produced by licking a gland on their arm, and the secretion mixes with its saliva to activate it. Their toxic bite is a deterrent to predators, and the toxin is also applied to the fur during grooming as a form of protection for their infants. They move slowly and deliberately, making little or no noise, and when threatened, they freeze and become docile. Their only documented predators—apart from humans—include snakes, hawk-eagles and orangutans, although cats, civets and sun bears are suspected. Little is known about their social structure, but they are known to communicate by scent marking. Males are highly territorial. Slow lorises reproduce slowly, and the infants are initially parked on branches or carried by either parent. They are omnivores, eating small animals, fruit, tree gum, and other vegetation.</p>
+    <p>All of the slow loris species which had been identified prior to 2012 are listed as either "Vulnerable" or "Endangered" on the IUCN Red List. The three newest species are yet to be evaluated, but they arise from (and further reduce) the ranks of what was thought to be a single "Vulnerable" species. All four of these are expected to be listed at least with the same, if not a higher-risk status. Each of the slow lorises are threatened by the wildlife trade and habitat loss. Although their habitat is rapidly disappearing and becoming fragmented, making it nearly impossible for slow lorises to disperse between forest fragments, unsustainable demand from the exotic pet trade and traditional medicine has been the greatest cause for their decline. Deep-rooted beliefs about the supernatural powers of slow lorises, such as their purported ability to ward off evil spirits or to cure wounds have popularized their use in traditional medicine. Despite local laws prohibiting trade in slow lorises and slow loris products, as well as protection from international commercial trade under Appendix I, slow lorises are openly sold in animal markets in Southeast Asia and smuggled to other countries, such as Japan. They have also been popularized as pets in viral videos on YouTube. Slow lorises have their teeth cut or pulled out for the pet trade, and often die from infection, blood loss, poor handling, or poor nutrition.</p>
+    
+  </body>
+</html>
