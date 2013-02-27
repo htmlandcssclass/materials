@@ -43,8 +43,8 @@ class window.CssControls.PropertyControl
     @showValue(@value)
 
   formattedValue: (value) ->
-    isANumber = value > 0 || value < 0
-    if isANumber && @options.measuredInPixels
+    isANonZeroNumber = value > 0 || value < 0
+    if isANonZeroNumber && @measuredInPixels
       value+'px'
     else
       value
