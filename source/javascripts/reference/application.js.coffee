@@ -62,6 +62,11 @@ $ ->
     value: 0
     input: range(0, 0, 600)
 
+  property 'z-index',
+    value: 0
+    measuredInPixels: false
+    input: range(0, 0, 150)
+
 
   comment 'decoration'
   property 'border',
@@ -88,3 +93,6 @@ $ ->
   property 'line-height',
     value: 16
     input: range 16, 0, 50
+
+  $('.controls-toggle').click ->
+    $('#controls').toggleClass('closed');

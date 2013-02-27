@@ -15,8 +15,9 @@ class window.PropertyControl
 
   constructor: (@property, @displayEl, @options) ->
     { @value, @disabledValue } = @options
-    @value          ?= 0
-    @disabledValue  ?= 'initial'
+    @value            ?= 0
+    @disabledValue    ?= 'initial'
+    @measuredInPixels ?= true
 
   showValue: (value) ->
     @valueOutput.text(@formattedValue(value))
@@ -38,7 +39,10 @@ class window.PropertyControl
 
   formattedValue: (value) ->
     isANumber = value > 0 || value < 0
-    if isANumber then value+'px' else value
+    if isANumber && @options.measuredInPixels
+      value+'px'
+    else
+      value
 
   render: ->
     markup = @template
