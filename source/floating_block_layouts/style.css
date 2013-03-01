@@ -1,0 +1,23 @@
+/*
+
+Floating Block Layouts
+
+Make your layout match the solution image by floating block elements.
+
+Each layout is 400px wide by 300px high.
+Each section has a height of 100px by default.
+
+Use only height, width, and float properties to create each layout.
+
+  height: 100px, 200px, 300px
+  width: 100px, 200px, 300px, or 400px
+  float: left, right, or none
+
+*/
+
+#layout-1 .section-1 {
+  height: 200px;
+}
+#layout-1 .section-2 {
+
+}
