@@ -1,4 +1,6 @@
-class window.PropertyControl
+window.CssControls ?= {}
+
+class window.CssControls.PropertyControl
 
   template: _.template '''
     <div id="<%= property %>-control" class="control">
@@ -13,23 +15,25 @@ class window.PropertyControl
     </div>
   '''
 
-  constructor: (@property, @displayEl, @options) ->
-    { @value, @disabledValue } = @options
+  constructor: (@property, @options) ->
+    { @value } = @options
     @value            ?= 0
-    @disabledValue    ?= 'initial'
-    @measuredInPixels ?= true
+    @options.measuredInPixels ?= true
+
+  setMatchedElements: (matchedElements) ->
+    @matchedElements = matchedElements
 
   showValue: (value) ->
-    @valueOutput.text(@formattedValue(value))
-    @displayEl.css(@property, @formattedValue(value))
+    return unless @matchedElements
+    @matchedElements.css(@property, @formattedValue(value))
+    @valueOutput.text(@matchedElements.css(@property))
 
   enableOrDisable: =>
     disabled = !@enabledInput.is(':checked')
-    console.log @enabledInput[0]
     @el.toggleClass('disabled', disabled)
     @valueInput.prop('disabled', disabled)
     if (disabled)
-      @showValue(@disabledValue)
+      @showValue('')
     else
       @showValue(@value)
 
