@@ -56,28 +56,28 @@ h1 {
   border: 5px solid white;
   box-shadow: 0 1px 5px rgba(0,0,0,.4);
   background-color: rgba(255,255,255,.5);
-}
 
-p {
-  margin-top: 0;
-}
+  p {
+    margin-top: 0;
+  }
 
-pre,
-code {
-  padding: 0 2px;
+  pre,
+  code {
+    padding: 0 2px;
 
-  background-color: rgba(0,0,0,0.075);
-  font-size: 15px;
-  line-height: 16px;
-}
+    background-color: rgba(0,0,0,0.075);
+    font-size: 15px;
+    line-height: 16px;
+  }
 
-pre {
-  padding: 5px;
-  margin-left: -5px;
-}
+  pre {
+    padding: 5px;
+    margin-left: -5px;
+  }
 
-pre code {
-  background-color: transparent;
+  pre code {
+    background-color: transparent;
+  }
 }
 
 /* layout headings */
