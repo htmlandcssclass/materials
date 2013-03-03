@@ -5,7 +5,8 @@ class window.CssControls.RuleControl
 
   render: ->
     matchedElements = $(@selector)
-    @el = $('<code><span class="selector">'+@selector+'</span> {</code>')
+    @el = $('<div class="rule"></div>')
+    @el.append $('<code><span class="selector">'+@selector+'</span> {</code>')
     for prop in @properties
       prop.setMatchedElements matchedElements if prop.setMatchedElements?
       @el.append(prop.render().el)

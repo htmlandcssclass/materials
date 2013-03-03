@@ -19,6 +19,7 @@ class window.CssControls.PropertyControl
     { @value } = @options
     @value            ?= 0
     @options.measuredInPixels ?= true
+    @options.input ?= "<code>#{@value}</code>"
 
   setMatchedElements: (matchedElements) ->
     @matchedElements = matchedElements
@@ -56,7 +57,7 @@ class window.CssControls.PropertyControl
     @el = $(markup)
 
     @enabledInput = @el.find('.enabled')
-    @valueInput = @el.find('.inputs .value')
+    @valueInput = @el.find('.inputs .value').val(@value)
     @valueOutput = @el.find('.output .value')
 
     @enabledInput.on 'change', @enableOrDisable

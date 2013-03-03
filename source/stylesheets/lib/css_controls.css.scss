@@ -8,6 +8,7 @@
   padding-left: 40px;
   padding-top: 80px;
 
+  color: black;
   background-color: rgba(220,220,220,.95);
   box-shadow: -1px 0 2px rgba(0,0,0,.4);
 
@@ -28,6 +29,12 @@
   .inputs {
     float: left;
     width: 200px;
+  }
+
+  .control,
+  .comment {
+    height: 18px;
+    line-height: 18px;
   }
 
   .control {
@@ -53,6 +60,10 @@
 
   .spacer {
     margin-top: 20px;
+  }
+
+  .rule {
+    margin-bottom: 20px;
   }
 }
 
