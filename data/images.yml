@@ -2,3 +2,11 @@ eames:
   'eames/eameslounge.jpg': Eames lounge chair
 paradise_pickles:
   'paradise_pickles/cover.jpg': Book cover
+suggestotron:
+  'suggest_o_tron/0_suggestotron_mockup.png': Overview
+  'suggest_o_tron/1_suggestotron_sections.png': Sections
+  'suggest_o_tron/2_suggestotron_puzzle.png': Look familiar?
+  'suggest_o_tron/3_suggestotron_type.png': Typography
+  'suggest_o_tron/4_suggestotron_dimentions.png': Dimentions
+  'suggest_o_tron/5_suggestotron-spec-menu.png': Account menu
+  'suggest_o_tron/6_suggestotron-spec-modal.png': Feedback window

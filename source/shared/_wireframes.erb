@@ -1,0 +1,14 @@
+<section class="wireframes">
+  <h3>Wireframes</h3>
+  <ul>
+    <% wireframes.each do |url, label| %>
+    <li class="wireframe">
+      <a class="preview" href="/images/<%= url %>">
+        <!-- <img src="/images/<%= url %>" /> -->
+        <div class="swatch img" style="background-image: url(/images/<%= url %>)"></div>
+      </a>
+      <p class="label"><%= label %></p>
+    </li>
+    <% end %>
+  </ul>
+</section>

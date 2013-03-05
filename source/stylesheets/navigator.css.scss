@@ -162,6 +162,30 @@ ol {
   }
 }
 
+.wireframe {
+  float: left;
+
+  width: 320px;
+  height: 300px;
+  padding-right: 18px;
+
+  .swatch {
+    float: left;
+
+    width: 320px;
+    height: 240px;
+    margin: 0;
+    overflow: hidden;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .preview {
+    margin-bottom: 9px;
+  }
+}
+
 .swatch {
   margin-bottom: 9px;
 
@@ -181,6 +205,7 @@ ol {
 
 a.preview {
   -webkit-transition: box-shadow .2s linear;
+  overflow: hidden;
   display: block;
   padding: 0;
   margin: 0 0 36px 0;
@@ -189,16 +214,18 @@ a.preview {
   border: 4px solid white;
   box-shadow: 0 0 1px rgba(0,0,0,.4);
 
-  img {
+  img, .img {
+    -webkit-transition: -webkit-filter .2s linear;
     display: block;
-    -webkit-filter: blur(.9px) grayscale(100%) opacity(.9);
     max-width: 672px;
+
+    -webkit-filter: blur(.9px) grayscale(100%) opacity(.9);
   }
 
   &:hover {
     box-shadow: 0 0 4px rgba(0,0,0,.4);
 
-    img {
+    img, .img {
       -webkit-filter: blur(0) grayscale(0) opacity(1);
     }
   }
