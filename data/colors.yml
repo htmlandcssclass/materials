@@ -4,19 +4,19 @@ paradise_pickles:
   '#423d3a': 'Body text'
   '#8e6e5a': 'Attribution text'
 
-helloworld_modernist:
+hello_world_modernist:
   '#eeeeee': Body background
   'white': Div background
   'red': Headline
 
-helloworld_tron:
+hello_world_tron:
   '#333333': Body background
   'cyan': Body text
   '#2d2d2d': Div background
   'lawngreen': Div border top
   'deeppink': Div border bottom
 
-helloworld_nametag:
+hello_world_nametag:
   'gold': Body background
   'white': Headline text, div background
   'red': Headline background, div border

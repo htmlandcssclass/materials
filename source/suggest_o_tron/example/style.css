@@ -57,11 +57,9 @@ a:hover {
 
 .header {
   position: fixed;
-  top: 0;
-  width: 940px;
-  
+  top: 23px; right: 0; left: 0;
+
   background-color: #fee;
-  overflow: hidden;
 }
 
 .brand {
@@ -86,6 +84,7 @@ a:hover {
   float: left;
   width: 520px;
   margin-right: 20px;
+  line-height: 36px;
 }
 
 .sidebar {
@@ -103,10 +102,41 @@ a:hover {
 
 /* Modal */
 
-.modal, .menu {
+.modal-container {
   display: none;
+  position: fixed;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
 }
 
+.modal-container.visible {
+  display: block;
+}
+
+.modal {
+  position: relative;
+  margin: 150px auto 0 auto;
+  width: 500px;
+}
+
+/* Menu */
+
+.menu {
+  float: right;
+  position: relative;
+
+  cursor: pointer;
+}
+
+.menu ul {
+  display: none;
+  position: absolute;
+  width: 200px;
+}
+
+.menu:hover ul {
+  display: block;
+}
 
 
 /* -------- Decoration -------- */
@@ -115,19 +145,14 @@ a:hover {
 .header {
   background-color: #333;
   color: white;
-  
+
   font-size: 18px;
+  line-height: 48px;
 }
 
-.header-fill {
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  height: 48px;
-  left: 0;
-  right: 0;
-  
-  background-color: #333;
+.container {
+  margin: 0 auto;
+  width: 940px;
 }
 
 .brand {
@@ -136,23 +161,32 @@ a:hover {
   line-height: 48px;
 }
 
-.header a {
+.header a,
+.menu li {
+  display: block;
+  padding: 0 20px;
+
   color: white;
-  text-decoration: none;  
+  background-color: #333;
+
+  text-decoration: none;
+}
+
+.header a:hover,
+.menu li:hover {
+  background-color: #000;
 }
 
 
 /* Nav */
 .app-nav li {
   float: left;
-  padding: 0 20px;
-  
-  line-height: 48px;
 }
 
 
 /* Org title */
 .org-title {
+  margin-top: 60px;
   padding-left: 180px;
 }
 
@@ -177,7 +211,7 @@ a:hover {
 /* Topics */
 .topic-title {
   width: 400px;
-  
+
   font-size: 27px;
   font-weight: bold;
   line-height: 36px;
@@ -185,7 +219,7 @@ a:hover {
 
 .votes {
   width: 120px;
-  
+
   vertical-align: top;
 }
 
@@ -193,9 +227,9 @@ a:hover {
   margin: 0 10px 0 0;
   float: left;
   width: 55px;
-  
+
   color: #666;
-  
+
   text-align: right;
   font-size: 27px;
 }
@@ -220,7 +254,7 @@ a:hover {
 
 .job-links {
   border-top: 1px solid black;
-  
+
   font-size: 9px;
   line-height: 13px;
 }
@@ -247,7 +281,7 @@ a:hover {
   bottom: 0;
   height: 25px;
   z-index: -1;
-  
+
   background-color: #333;
 }
 
@@ -260,3 +294,100 @@ a:hover {
   float: right;
   padding-left: 10px;
 }
+
+/* Modal */
+.modal-container {
+  background-color: rgba(0,0,0,.4);
+}
+
+.modal {
+  background-color: white;
+  padding: 10px;
+}
+
+.modal h3 {
+  margin: 0 0 5px 0;
+}
+
+.modal textarea {
+  display: block;
+  width: 490px;
+  height: 150px;
+
+  font-size: 18px;
+}
+
+.modal .close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+
+  background-color: #333;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+
+  line-height: 18px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.close:hover {
+  background-color: #000;
+}
+
+/* Feedback badge */
+.feedback-badge {
+  -webkit-transform:rotate(-90deg);
+
+  position: absolute;
+  left: -24px; top: 140px;
+  padding: 0 10px;
+
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+
+  font-size: 12px;
+}
+
+.feedback-badge:hover {
+  background-color: #000;
+}
+
+/* Form elements */
+
+input {
+  padding: 3px 7px;
+
+  border: 1px solid #ccc;
+  font-size: 18px;
+}
+
+input[type=submit] {
+  color: white;
+  background-color: #333;
+  border: 1px solid #000;
+}
+
+input[type=submit]:hover {
+  background-color: #000;
+}
+
+
+
+input[type=email] {
+  width: 145px;
+}
+
+#suggest-topic input[type=text] {
+  width: 283px;
+}
+
+
+
+
+
+
