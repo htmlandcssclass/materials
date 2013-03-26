@@ -1,0 +1,402 @@
+/* ------- Global styles ------- */
+
+body {
+  margin: 0 auto;
+  padding: 0 0 25px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+/* Typography */
+
+body {
+  font-size: 18px;
+  line-height: 27px;
+  font-family: Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 27px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+a {
+  color: #AD3B71;
+}
+
+a:hover {
+  color: #C8427C;
+  text-decoration: underline;
+}
+
+.selected {
+  font-weight: bold;
+}
+
+
+
+
+
+
+/* ------- Layout ------- */
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+
+/* Header */
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 48px;
+  background-color: #fee;
+}
+
+.brand {
+  float: left;
+  font-size: 18px;
+}
+
+
+/* Content */
+
+.org-name {
+
+}
+
+.org-nav {
+  float: left;
+  width: 160px;
+  margin-right: 20px;
+}
+
+.topics {
+  float: left;
+  width: 520px;
+  margin-right: 20px;
+  line-height: 36px;
+}
+
+.sidebar {
+  float: left;
+  width: 220px;
+}
+
+
+/* Footer */
+
+.footer {
+  clear: left;
+}
+
+
+/* Modal */
+
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+}
+
+.modal-container.visible {
+  display: block;
+}
+
+.modal {
+  position: relative;
+  margin: 150px auto 0 auto;
+  width: 500px;
+}
+
+/* Menu */
+
+.menu {
+  float: right;
+  position: relative;
+
+  cursor: pointer;
+}
+
+.menu ul {
+  display: none;
+  position: absolute;
+  width: 200px;
+}
+
+.menu:hover ul {
+  display: block;
+}
+
+
+/* -------- Decoration -------- */
+
+/* Header */
+.header {
+  background-color: #333;
+  color: white;
+
+  font-size: 18px;
+  line-height: 48px;
+}
+
+.brand {
+  width: 160px;
+  margin: 0;
+  line-height: 48px;
+}
+
+.header a,
+.menu li {
+  display: block;
+  padding: 0 20px;
+
+  color: white;
+  background-color: #333;
+
+  text-decoration: none;
+}
+
+.header a:hover,
+.menu li:hover {
+  background-color: #000;
+}
+
+
+/* Nav */
+.app-nav li {
+  float: left;
+}
+
+
+/* Org title */
+.org-title {
+  margin-top: 60px;
+  padding-left: 180px;
+}
+
+
+/* --- Content --- */
+.org-nav,
+.topics,
+.sidebar {
+  border-top: 1px solid black;
+}
+
+/* Org nav */
+.org-nav li {
+  margin-bottom: 9px;
+}
+
+.org-nav a {
+  text-decoration: none;
+}
+
+
+/* Topics */
+.topic-title {
+  width: 400px;
+
+  font-size: 27px;
+  font-weight: bold;
+  line-height: 36px;
+}
+
+.votes {
+  width: 120px;
+
+  vertical-align: top;
+}
+
+.vote-tally {
+  margin: 0 10px 0 0;
+  float: left;
+  width: 55px;
+
+  color: #666;
+
+  text-align: right;
+  font-size: 27px;
+}
+
+#suggest-topic {
+  padding-left: 120px;
+}
+
+
+/* Sidebar */
+.social-links {
+  margin-bottom: 18px;
+}
+
+.social-links p {
+  margin: 0;
+}
+
+.social-links li {
+  margin-bottom: 9px;
+}
+
+.job-links {
+  border-top: 1px solid black;
+
+  font-size: 9px;
+  line-height: 13px;
+}
+
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 25px;
+  width: 100%;
+
+  background-color: #333;
+  color: white;
+
+  font-size: 9px;
+  line-height: 25px;
+}
+
+.footer .copyright {
+  float: left;
+  margin: 0;
+}
+
+.footer .footer-link {
+  float: right;
+  padding-left: 10px;
+}
+
+/* Modal */
+.modal-container {
+  background-color: rgba(0,0,0,.4);
+}
+
+.modal {
+  background-color: white;
+  padding: 10px;
+}
+
+.modal h3 {
+  margin: 0 0 5px 0;
+}
+
+.modal textarea {
+  display: block;
+  width: 490px;
+  height: 150px;
+
+  font-size: 18px;
+}
+
+.modal .close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+
+  background-color: #333;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+
+  line-height: 18px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.close:hover {
+  background-color: #000;
+}
+
+/* Feedback badge */
+.feedback-badge {
+  -webkit-transform:rotate(-90deg);
+
+  position: absolute;
+  left: -24px; top: 140px;
+  padding: 0 10px;
+
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+
+  font-size: 12px;
+}
+
+.feedback-badge:hover {
+  background-color: #000;
+}
+
+/* Form elements */
+
+input {
+  padding: 3px 7px;
+
+  border: 1px solid #ccc;
+  font-size: 18px;
+}
+
+input[type=submit] {
+  color: white;
+  background-color: #333;
+  border: 1px solid #000;
+}
+
+input[type=submit]:hover {
+  background-color: #000;
+}
+
+
+
+input[type=email] {
+  width: 145px;
+}
+
+#suggest-topic input[type=text] {
+  width: 283px;
+}
+
+
+.mobile-menu {
+  display: none;
+  float: none;
+  clear: both;
+  margin-top: 48px;
+
+  background-color: #333;
+  color: white;
+
+  font-size: 18px;
+  line-height: 48px;
+}
+
+.mobile-menu li {
+  padding: 0 2.5%; /* 24px / 960px */
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: white;
+}
+
+
+

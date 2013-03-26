@@ -1,0 +1,99 @@
+/* Fixed-width design */
+
+.hero-container {
+  padding-top: 80px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+.figure-container {
+  overflow: hidden;
+  color: white;
+  background-color: #333;
+}
+
+figure {
+  float: left;
+  width: 264px;
+  margin: 0 0 12px 0;
+  padding: 24px;
+}
+
+figure img {
+  display: block;
+
+  background-color: pink;
+  max-width: 264px;
+  margin-bottom: 12px;
+}
+
+
+/* Fluid layout */
+
+.container {
+  width: 93.75%; /* 960px / 1024px */
+  min-width: 300px;
+  max-width: 1024px;
+}
+
+figure {
+  width: 27.5%; /* 264px / 960px */
+  padding: 2.5%; /* 24px / 960px */
+  min-width: 180px;
+}
+
+figure img {
+  max-width: 100%;
+}
+
+
+/* Mobile-optimized */
+
+@media screen and (max-width: 768px) {
+
+  .hero-container {
+    padding-top: 24px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  figure {
+    min-width: 300px;
+  }
+
+
+  .header {
+    position: static;
+    overflow: hidden;
+  }
+
+  .footer {
+    position: static;
+  }
+
+
+  .header .menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .brand {
+    display: none;
+  }
+
+}
