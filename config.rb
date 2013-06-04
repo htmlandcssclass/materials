@@ -1,9 +1,18 @@
-activate :deploy do |deploy|
-  deploy.method = :ftp
-  deploy.host = IO.read(File.dirname(__FILE__)+'/.secrets/host.txt')
-  deploy.user = IO.read(File.dirname(__FILE__)+'/.secrets/user.txt')
-  deploy.password = IO.read(File.dirname(__FILE__)+'/.secrets/password.txt')
-  deploy.path = ""
+require 'yaml'
+
+
+activate :sync do |sync|
+  secret = YAML.load_file(File.dirname(__FILE__)+'/.secrets.yml')
+
+  sync.fog_provider = secret['fog_provider']
+  sync.fog_directory = secret['fog_directory']
+  sync.fog_region = secret['fog_region']
+  sync.aws_access_key_id = secret['aws_access_key_id']
+  sync.aws_secret_access_key = secret['aws_secret_access_key']
+
+  sync.existing_remote_files = 'keep' # What to do with your existing remote files? ( keep or delete )
+  sync.gzip_compression = true # Automatically replace files with their equivalent gzip compressed version
+  sync.after_build = false # Disable sync to run after Middleman build ( defaults to true )
 end
 
 helpers do
